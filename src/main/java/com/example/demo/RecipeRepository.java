@@ -1,8 +1,8 @@
 package com.example.demo;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
-import java.util.List;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface RecipeRepository extends MongoRepository<Recipe, String> {
-    List<Recipe> findByIngredientsContaining(String ingredient);
 }
